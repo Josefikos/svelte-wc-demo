@@ -44,13 +44,15 @@
     %TEST%
 </div>
 
-    %TEST%
+%TEST%
+
+<div style="border: red 2px solid">%DATA%</div>
 
 <button id="test">Test</button>
 <script>
     const button = document.getElementById("test");
     button.addEventListener("click", function (event) {
-        document.body.innerHTML = document.body.innerHTML.replaceAll("%TEST%", "<cesys-borec/>");
+        document.body.innerHTML = document.body.innerHTML.replaceAll("%TEST%", "<cesys-borec/>").replaceAll("%DATA%", "<cesys-test/>");
     });
 </script>
 </body>
